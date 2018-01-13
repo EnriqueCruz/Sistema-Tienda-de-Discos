@@ -1,0 +1,19 @@
+<%
+vid = request.form("Campos[]")
+
+    set cnx = CreateObject("ADODB.connection")
+	cnx.connectionstring = Application("myconestr")
+	cnx.open
+	set myrs = CreateObject("ADODB.recordset")
+	SQL = "delete * from Disco Where Id _Disco IN ("+ vid +")"
+	myrs.activeconnection = cnx
+	myrs.source = sql
+	myrs.open,,0,2
+
+
+%>
+
+<Script language="JavaScript">
+	alert("Informacion Guardada Exitosamente")
+	window.location.href = "Consultas.asp"
+	   </Script>

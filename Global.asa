@@ -1,0 +1,15 @@
+<script language="VBScript" Runat = "Server">
+	Sub Application_OnStart
+		Application("myconestr") =      "Provider = Microsoft.jet.OLEDB.4.0;data source = C:\DISKMARK.mdb"
+	End Sub
+	
+	Sub Application_OnEnd
+	End Sub
+	
+	Sub Session_OnStart
+	End Sub
+	
+	Sub Session_OnEnd
+	End Sub
+	
+</script>
